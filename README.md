@@ -1,6 +1,6 @@
 # marien.se — ny sajt
 
-Portfolio-sajten för Marie Nilsson (UX/UI-designer), byggd i Next.js som ersättning för den gamla WordPress-sajten. Allt textinnehåll är migrerat från en WordPress-export (startsida, kontaktsida och 21 portfolio-projekt).
+Portfolio-sajten för Marie Bäckström (UX/UI-designer), byggd i Next.js som ersättning för den gamla WordPress-sajten. Allt textinnehåll är migrerat från en WordPress-export (startsida, kontaktsida och 21 portfolio-projekt).
 
 ## Utveckling
 

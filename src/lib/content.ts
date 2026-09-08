@@ -500,7 +500,7 @@ export const clients: Client[] = [
 ];
 
 export const siteInfo = {
-  name: "Marie Nilsson",
+  name: "Marie Bäckström",
   tagline: "UX designer / UI designer",
   email: "ux@marien.se",
   phone: "072-736 90 62",

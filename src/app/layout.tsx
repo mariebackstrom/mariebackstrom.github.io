@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PasswordGate from "@/components/PasswordGate";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marie Nilsson — UX & UI designer",
+  title: "Marie Bäckström — UX & UI designer",
   description:
-    "Marie Nilsson är UX- och UI-designer med uppdrag inom bland annat Netigate, Compentus, Tillväxtverket och Försvarsmakten.",
+    "Marie Bäckström är UX- och UI-designer med uppdrag inom bland annat Netigate, Compentus, Tillväxtverket och Försvarsmakten.",
 };
 
 export default function RootLayout({
@@ -31,9 +32,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <PasswordGate>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </PasswordGate>
       </body>
     </html>
   );

@@ -8,7 +8,7 @@ export default function Header() {
           href="/"
           className="text-sm font-semibold tracking-[0.2em] uppercase"
         >
-          Marie Nilsson
+          Marie Bäckström
         </Link>
         <nav className="flex items-center gap-8 text-sm tracking-wide uppercase">
           <Link href="/#uppdrag" className="hover:text-accent transition-colors">

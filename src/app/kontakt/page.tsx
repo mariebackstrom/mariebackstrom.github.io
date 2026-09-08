@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { siteInfo } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Marie Nilsson",
-  description: "Säg hej — kontaktuppgifter till Marie Nilsson, UX & UI designer.",
+  title: "Kontakt — Marie Bäckström",
+  description: "Säg hej — kontaktuppgifter till Marie Bäckström, UX & UI designer.",
 };
 
 export default function KontaktPage() {
