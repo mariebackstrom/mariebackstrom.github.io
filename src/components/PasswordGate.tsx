@@ -48,9 +48,9 @@ export default function PasswordGate({
       <div className="flex min-h-screen items-center justify-center bg-background px-6">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-sm rounded-lg border border-border bg-surface p-8"
+          className="w-full max-w-sm rounded-3xl border border-border bg-surface p-8 shadow-[0_20px_60px_-30px_rgba(23,22,42,0.25)]"
         >
-          <h1 className="text-sm font-semibold tracking-[0.2em] uppercase text-foreground">
+          <h1 className="font-display text-lg font-bold tracking-tight text-accent">
             Marie Bäckström
           </h1>
           <p className="mt-2 text-sm text-muted">
@@ -65,7 +65,7 @@ export default function PasswordGate({
               setInput(event.target.value);
               setError(false);
             }}
-            className="mt-6 w-full rounded border border-border bg-background px-4 py-2 text-foreground outline-none focus:border-accent"
+            className="mt-6 w-full rounded-full border border-border bg-background px-5 py-2.5 text-foreground outline-none focus:border-accent"
             placeholder="Lösenord"
           />
           {error && (
@@ -73,7 +73,7 @@ export default function PasswordGate({
           )}
           <button
             type="submit"
-            className="mt-4 w-full rounded bg-accent px-4 py-2 text-sm font-semibold uppercase tracking-wide text-background transition-opacity hover:opacity-90"
+            className="mt-4 w-full rounded-full bg-[image:var(--gradient-accent)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
           >
             Lås upp
           </button>

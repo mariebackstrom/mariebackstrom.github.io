@@ -21,7 +21,7 @@ export default function ProjectGrid() {
             onClick={() => setActive(cat)}
             className={`rounded-full border px-4 py-1.5 text-sm tracking-wide transition-colors ${
               active === cat
-                ? "border-accent bg-accent text-black"
+                ? "border-transparent bg-[image:var(--gradient-accent)] text-white"
                 : "border-border text-muted hover:border-accent hover:text-accent"
             }`}
           >

@@ -2,31 +2,67 @@ import Link from "next/link";
 import ProjectGrid from "@/components/ProjectGrid";
 import { clients, siteInfo, testimonials } from "@/lib/content";
 
+const quickLinks = [
+  { text: "Se mina uppdrag", href: "#uppdrag" },
+  { text: "Läs vad kollegor säger", href: "#omdomen" },
+  { text: "Se kunder jag jobbat med", href: "#kunder" },
+  { text: "Kontakta mig", href: "/kontakt" },
+];
+
 export default function Home() {
   return (
     <>
       <section className="border-b border-border">
-        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-28 text-center sm:py-36">
-          <p className="text-sm tracking-[0.3em] text-muted uppercase">
-            {siteInfo.name}
-          </p>
-          <h1 className="mt-6 text-4xl leading-tight font-bold tracking-tight sm:text-6xl">
-            UX designer
-            <br />
-            <span className="text-accent">UI designer</span>
-          </h1>
-          <Link
-            href="/kontakt"
-            className="mt-10 rounded-full border border-accent px-6 py-2.5 text-sm tracking-wide uppercase transition-colors hover:bg-accent hover:text-black"
-          >
-            Säg hej
-          </Link>
+        <div className="mx-auto grid max-w-6xl gap-16 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="text-sm tracking-[0.3em] text-muted uppercase">
+              {siteInfo.tagline}
+            </p>
+            <h1 className="font-display mt-6 text-4xl leading-tight font-bold tracking-tight sm:text-6xl">
+              Hej, jag är
+              <br />
+              <span className="text-accent">Marie</span>
+            </h1>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-foreground/80">
+              Jag är <span className="font-semibold text-accent">UX- och UI-designer</span>{" "}
+              med uppdrag inom bland annat{" "}
+              <span className="font-semibold text-accent">
+                Netigate, Compentus, Tillväxtverket och Försvarsmakten
+              </span>
+              . Jag jobbar lika gärna med research och struktur som med grafisk
+              formgivning och illustration.{" "}
+              <Link
+                href="/kontakt"
+                className="font-semibold text-foreground underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+              >
+                Säg hej
+              </Link>
+              .
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-border bg-surface p-8 shadow-[0_20px_60px_-30px_rgba(23,22,42,0.25)]">
+            <h2 className="font-display text-xl font-bold tracking-tight">
+              Vill du veta mer?
+            </h2>
+            <div className="mt-6 flex flex-col gap-3">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.text}
+                  href={link.href}
+                  className="rounded-full bg-[image:var(--gradient-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  {link.text} →
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="uppdrag" className="mx-auto max-w-6xl px-6 py-24">
-        <div className="mb-2 h-0.5 w-10 bg-accent" />
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mb-2 h-1 w-10 rounded-full bg-[image:var(--gradient-accent)]" />
+        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
           Utvalda
           <br />
           uppdrag
@@ -36,23 +72,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="omdomen" className="border-t border-border bg-surface">
+      <section id="omdomen" className="border-t border-border bg-surface-tint">
         <div className="mx-auto max-w-6xl px-6 py-24">
-          <div className="mb-2 h-0.5 w-10 bg-accent" />
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="mb-2 h-1 w-10 rounded-full bg-[image:var(--gradient-accent)]" />
+          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Ord från
             <br />
             kollegor
           </h2>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {testimonials.map((t) => (
               <blockquote
                 key={t.name + t.title}
-                className="rounded-sm border border-border p-6"
+                className="rounded-2xl border border-border bg-surface p-6 shadow-sm"
               >
                 <p className="text-foreground/90">&ldquo;{t.quote}&rdquo;</p>
                 <footer className="mt-4 text-sm text-muted">
-                  <span className="font-semibold text-foreground">{t.name}</span>
+                  <span className="font-semibold text-accent">{t.name}</span>
                   {" — "}
                   {t.title}
                 </footer>
@@ -62,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section id="kunder" className="mx-auto max-w-6xl px-6 py-24">
         <p className="text-sm tracking-[0.3em] text-muted uppercase">
           Kunder & uppdragsgivare
         </p>
