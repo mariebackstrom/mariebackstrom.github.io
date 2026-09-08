@@ -505,3 +505,71 @@ export const siteInfo = {
   email: "ux@marien.se",
   phone: "072-736 90 62",
 };
+
+export type ChatbotEntry = {
+  id: string;
+  question: string;
+  keywords: string[];
+  answer: string;
+};
+
+export const chatbotFaq: ChatbotEntry[] = [
+  {
+    id: "vad-gor-du",
+    question: "Vad jobbar du med?",
+    keywords: ["vad gör du", "jobbar du med", "vem är du", "om dig", "vad är du"],
+    answer:
+      "Jag är UX- och UI-designer med uppdrag inom bland annat UX/UI-design, grafisk formgivning, illustration och rörlig grafik. Jag jobbar lika gärna med research och struktur som med visuellt uttryck.",
+  },
+  {
+    id: "kunder",
+    question: "Vilka har du jobbat med?",
+    keywords: ["kund", "uppdragsgivare", "företag", "jobbat med", "referenser"],
+    answer:
+      "Jag har bland annat jobbat med Netigate, Compentus, Tillväxtverket, Försvarsmakten, Notar och Uppsala universitet.",
+  },
+  {
+    id: "kontakt",
+    question: "Hur når jag dig?",
+    keywords: ["kontakt", "nå dig", "höra av", "mejl", "mail", "telefon", "ring", "hej"],
+    answer: `Enklast är att mejla ${siteInfo.email} eller ringa ${siteInfo.phone} – eller gå till kontaktsidan.`,
+  },
+  {
+    id: "stolt-projekt",
+    question: "Vilket projekt är du mest stolt över?",
+    keywords: ["stolt", "bästa projekt", "favoritprojekt", "höjdpunkt", "roligast"],
+    answer:
+      "Redesignen och ombyggnationen av Netigates undersökningsplattform – jag gick från UX-konsult till UX Lead och ledde omdesignen för en plattform med över 16 000 användare.",
+  },
+  {
+    id: "kollegor",
+    question: "Vad säger dina kollegor om dig?",
+    keywords: ["kollega", "vad säger", "omdöme", "rekommendation", "referens om dig"],
+    answer:
+      "”Marie är den bästa UX-lead som jag har jobbat med. Hon är snabb, noggrann, tar egna initiativ och har stor förståelse för vad uppgiften kräver.” – Peter, CTO Netigate",
+  },
+  {
+    id: "process",
+    question: "Hur jobbar du?",
+    keywords: ["process", "arbetssätt", "metod", "hur jobbar du", "tillvägagångssätt"],
+    answer:
+      "Oftast börjar jag med research och intervjuer, går vidare med wireframes och prototyper, testar med riktiga användare och finjusterar iterativt tillsammans med utvecklare och stakeholders.",
+  },
+  {
+    id: "grafisk",
+    question: "Gör du grafisk design också?",
+    keywords: ["grafisk", "illustration", "logotyp", "print", "tryck", "banner"],
+    answer:
+      "Ja! Utöver UX/UI tar jag även uppdrag inom grafisk formgivning, illustration och rörlig grafik – bland annat logotyper, tryckmaterial och bannerdesign.",
+  },
+  {
+    id: "pris",
+    question: "Vad kostar ett uppdrag?",
+    keywords: ["pris", "kostnad", "arvode", "offert", "timpris"],
+    answer:
+      "Det beror helt på uppdraget – hör av dig så pratar vi om vad du behöver och tar fram en offert.",
+  },
+];
+
+export const chatbotFallback =
+  "Bra fråga! Den kan jag inte svara på här – men skriv gärna till mig direkt, så svarar jag personligen.";

@@ -1,13 +1,7 @@
 import Link from "next/link";
 import ProjectGrid from "@/components/ProjectGrid";
+import AskMeWidget from "@/components/AskMeWidget";
 import { clients, siteInfo, testimonials } from "@/lib/content";
-
-const quickLinks = [
-  { text: "Se mina uppdrag", href: "#uppdrag" },
-  { text: "Läs vad kollegor säger", href: "#omdomen" },
-  { text: "Se kunder jag jobbat med", href: "#kunder" },
-  { text: "Kontakta mig", href: "/kontakt" },
-];
 
 export default function Home() {
   return (
@@ -41,22 +35,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-border bg-surface p-8 shadow-[0_20px_60px_-30px_rgba(23,22,42,0.25)]">
-            <h2 className="font-display text-xl font-bold tracking-tight">
-              Vill du veta mer?
-            </h2>
-            <div className="mt-6 flex flex-col gap-3">
-              {quickLinks.map((link) => (
-                <a
-                  key={link.text}
-                  href={link.href}
-                  className="rounded-full bg-[image:var(--gradient-accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  {link.text} →
-                </a>
-              ))}
-            </div>
-          </div>
+          <AskMeWidget />
         </div>
       </section>
 
