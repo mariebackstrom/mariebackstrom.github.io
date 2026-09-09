@@ -504,6 +504,8 @@ export const siteInfo = {
   tagline: "UX designer / UI designer",
   email: "ux@marien.se",
   phone: "072-736 90 62",
+  socialEmail: "marie.backstrom88@gmail.com",
+  linkedin: "https://www.linkedin.com/in/marie-backstrom/",
 };
 
 export type ChatbotEntry = {

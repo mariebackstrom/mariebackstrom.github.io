@@ -42,8 +42,8 @@ export default function AskMeWidget() {
   const suggestions = chatbotFaq.filter((entry) => !askedIds.includes(entry.id)).slice(0, 4);
 
   return (
-    <div className="rounded-3xl border border-border bg-surface p-8 shadow-[0_20px_60px_-30px_rgba(23,22,42,0.25)]">
-      <h2 className="font-display text-xl font-bold tracking-tight">
+    <div>
+      <h2 className="font-display text-xl font-bold tracking-tight sm:text-2xl">
         Vill du fråga mig något?
       </h2>
       <p className="mt-1 text-xs tracking-wide text-muted uppercase">
@@ -88,7 +88,7 @@ export default function AskMeWidget() {
           value={input}
           onChange={(event) => setInput(event.target.value)}
           placeholder="Skriv en fråga..."
-          className="w-full rounded-full border border-border bg-background px-5 py-2.5 text-sm text-foreground outline-none focus:border-accent"
+          className="w-full rounded-full border border-border bg-surface px-5 py-2.5 text-sm text-foreground shadow-sm outline-none focus:border-accent"
         />
         <button
           type="submit"

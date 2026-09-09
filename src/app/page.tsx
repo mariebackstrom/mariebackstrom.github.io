@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProjectGrid from "@/components/ProjectGrid";
 import AskMeWidget from "@/components/AskMeWidget";
+import AvatarPlaceholder from "@/components/AvatarPlaceholder";
 import { clients, siteInfo, testimonials } from "@/lib/content";
 
 export default function Home() {
@@ -35,7 +36,10 @@ export default function Home() {
             </p>
           </div>
 
-          <AskMeWidget />
+          <div className="relative">
+            <AskMeWidget />
+            <AvatarPlaceholder />
+          </div>
         </div>
       </section>
 
