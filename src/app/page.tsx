@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ProjectGrid from "@/components/ProjectGrid";
 import AskMeWidget from "@/components/AskMeWidget";
-import AvatarPlaceholder from "@/components/AvatarPlaceholder";
+import Avatar from "@/components/Avatar";
 import { clients, siteInfo, testimonials } from "@/lib/content";
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
 
           <div className="relative">
             <AskMeWidget />
-            <AvatarPlaceholder />
+            <Avatar />
           </div>
         </div>
       </section>

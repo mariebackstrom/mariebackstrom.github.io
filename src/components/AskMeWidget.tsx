@@ -51,14 +51,14 @@ export default function AskMeWidget() {
       </p>
 
       {messages.length > 0 && (
-        <div className="mt-6 max-h-80 space-y-3 overflow-y-auto pr-1">
+        <div className="mt-6 flex max-h-80 flex-col gap-3 overflow-y-auto py-1 pr-24 sm:pr-28">
           {messages.map((message, i) => (
             <div
               key={i}
               className={
                 message.role === "user"
-                  ? "ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-[image:var(--gradient-accent)] px-4 py-2.5 text-sm text-white"
-                  : "mr-auto max-w-[85%] rounded-2xl rounded-bl-sm bg-surface-tint px-4 py-2.5 text-sm text-foreground/90"
+                  ? "ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-sm bg-[image:var(--gradient-accent)] px-4 py-2.5 text-sm text-white"
+                  : "mr-auto w-fit max-w-[85%] rounded-2xl rounded-bl-sm bg-surface-tint px-4 py-2.5 text-sm text-foreground/90"
               }
             >
               {message.text}
@@ -68,13 +68,13 @@ export default function AskMeWidget() {
       )}
 
       {suggestions.length > 0 && (
-        <div className="mt-6 flex flex-col gap-3">
+        <div className="mt-6 flex flex-col items-end gap-3 pr-24 sm:pr-28">
           {suggestions.map((entry) => (
             <button
               key={entry.id}
               type="button"
               onClick={() => ask(entry.question, entry.id)}
-              className="rounded-full bg-[image:var(--gradient-accent)] px-5 py-3 text-left text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
+              className="w-fit max-w-[90%] rounded-full bg-[image:var(--gradient-accent)] px-5 py-3 text-left text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:shadow-md"
             >
               {entry.question}
             </button>
@@ -82,7 +82,7 @@ export default function AskMeWidget() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="mt-6 flex gap-2">
+      <form onSubmit={handleSubmit} className="mt-14 flex gap-2">
         <input
           type="text"
           value={input}
