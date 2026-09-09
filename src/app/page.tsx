@@ -14,9 +14,7 @@ export default function Home() {
               {siteInfo.tagline}
             </p>
             <h1 className="font-display mt-6 text-4xl leading-tight font-bold tracking-tight sm:text-6xl">
-              Hej, jag är
-              <br />
-              <span className="text-accent">Marie</span>
+              Hej
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-foreground/80">
               Jag är <span className="font-semibold text-accent">UX-designer</span>{" "}
