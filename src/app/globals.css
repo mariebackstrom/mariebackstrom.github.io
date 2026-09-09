@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0b0c;
+  --foreground: #f5f4f0;
+  --muted: #9a9a97;
+  --accent: #fe6c61;
+  --accent-2: #c8443c;
+  --surface: #161616;
+  --surface-tint: #1e1e1e;
+  --border: #2a2a2a;
+  --gradient-accent: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+
+:root[data-theme="light"] {
+  --background: #f4f4fb;
+  --foreground: #17162a;
+  --muted: #6f6d85;
+  --accent: #ff5a36;
+  --accent-2: #ef2d56;
+  --surface: #ffffff;
+  --surface-tint: #ebebf8;
+  --border: #e3e2f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-surface: var(--surface);
+  --color-surface-tint: var(--surface-tint);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-geist-mono);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
