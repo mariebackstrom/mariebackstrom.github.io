@@ -501,7 +501,7 @@ export const clients: Client[] = [
 
 export const siteInfo = {
   name: "Marie Bäckström",
-  tagline: "UX designer / UI designer",
+  tagline: "UX designer",
   email: "ux@marien.se",
   phone: "072-736 90 62",
   socialEmail: "marie.backstrom88@gmail.com",
@@ -521,7 +521,7 @@ export const chatbotFaq: ChatbotEntry[] = [
     question: "Vad jobbar du med?",
     keywords: ["vad gör du", "jobbar du med", "vem är du", "om dig", "vad är du"],
     answer:
-      "Jag är UX- och UI-designer med uppdrag inom bland annat UX/UI-design, grafisk formgivning, illustration och rörlig grafik. Jag jobbar lika gärna med research och struktur som med visuellt uttryck.",
+      "Jag är UX-designer med uppdrag inom bland annat UX-design, grafisk formgivning, illustration och rörlig grafik. Jag jobbar lika gärna med research och struktur som med visuellt uttryck.",
   },
   {
     id: "kunder",

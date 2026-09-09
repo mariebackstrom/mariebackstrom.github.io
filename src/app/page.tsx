@@ -19,7 +19,7 @@ export default function Home() {
               <span className="text-accent">Marie</span>
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-foreground/80">
-              Jag är <span className="font-semibold text-accent">UX- och UI-designer</span>{" "}
+              Jag är <span className="font-semibold text-accent">UX-designer</span>{" "}
               med uppdrag inom bland annat{" "}
               <span className="font-semibold text-accent">
                 Netigate, Compentus, Tillväxtverket och Försvarsmakten

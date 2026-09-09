@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marie Bäckström — UX & UI designer",
+  title: "Marie Bäckström — UX designer",
   description:
-    "Marie Bäckström är UX- och UI-designer med uppdrag inom bland annat Netigate, Compentus, Tillväxtverket och Försvarsmakten.",
+    "Marie Bäckström är UX-designer med uppdrag inom bland annat Netigate, Compentus, Tillväxtverket och Försvarsmakten.",
 };
 
 export default function RootLayout({
