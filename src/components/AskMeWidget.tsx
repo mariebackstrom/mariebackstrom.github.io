@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { chatbotFaq, chatbotFallback } from "@/lib/content";
 
 type Message = {
@@ -20,6 +20,14 @@ export default function AskMeWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [askedIds, setAskedIds] = useState<string[]>([]);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({
+      top: scrollRef.current.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [messages]);
 
   function ask(question: string, id?: string) {
     const answer = findAnswer(question);
@@ -51,7 +59,10 @@ export default function AskMeWidget() {
       </p>
 
       {messages.length > 0 && (
-        <div className="mt-6 flex max-h-80 flex-col gap-3 overflow-y-auto py-1 pr-24 sm:pr-28">
+        <div
+          ref={scrollRef}
+          className="mt-6 flex max-h-80 flex-col gap-3 overflow-y-auto py-1 pr-24 sm:pr-28"
+        >
           {messages.map((message, i) => (
             <div
               key={i}
